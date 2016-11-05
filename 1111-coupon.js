@@ -19,7 +19,7 @@
         while(count<=10){
 			if ($(document).xpathEvaluate(objectPath).length != 0) {
 				$(document).xpathEvaluate(objectPath).click();
-				console.log(++count);
+				//console.log(++count);
 			}
 		}
 		console.log("Finish");

@@ -15,13 +15,15 @@
     var objectPath = ".//*[@id='J_3107391010']/div/div/div[2]/div";
     count=0;
     var myRedpocketAutoRun = function () {
-        if ($(document).xpathEvaluate(objectPath).length != 0) {
-            console.log("Start:");
-            $(document).xpathEvaluate(objectPath).click();
-            console.log(++count);
-        }
-        else
-            console.log("Finish");
+		console.log("Start:");
+        while(count<=10){
+			if ($(document).xpathEvaluate(objectPath).length != 0) {
+				$(document).xpathEvaluate(objectPath).click();
+				console.log(++count);
+			}
+		}
+		console.log("Finish");
+		count=0;
     }
 
     //整点自动调用
@@ -29,7 +31,7 @@
         var curDate = new Date();
         var curHour = curDate.getHours();
         var curMinute = curDate.getMinutes();
-        return curHour >= 9 && curHour <= 22 && curMinute < 3
+        return curHour >= 9 && curHour <= 22 && curMinute < 2
     }
     var pocketInterval = setInterval(function () {
         console.log("Try to start:......");

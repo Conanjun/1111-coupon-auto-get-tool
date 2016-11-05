@@ -29,7 +29,7 @@
         var curDate = new Date();
         var curHour = curDate.getHours();
         var curMinute = curDate.getMinutes();
-        return curHour >= 9 && curHour <= 22 && curMinute < 10
+        return curHour >= 9 && curHour <= 22 && curMinute < 3
     }
     var pocketInterval = setInterval(function () {
         console.log("Try to start:......");

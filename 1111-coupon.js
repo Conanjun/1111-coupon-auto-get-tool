@@ -40,5 +40,5 @@
         else
             console.log("It is not time to start");
 
-    }, 5000);
+    }, 2000);
 })();
